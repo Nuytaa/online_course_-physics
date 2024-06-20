@@ -1,0 +1,138 @@
+
+body {
+    overflow: hidden;
+}
+
+section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url(bg2.jpg);
+    z-index: -999;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-x: center;
+    animation: animateBg 5s linear infinite;
+}
+
+@keyframes animateBg {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+span {
+    position: absolute;
+    top: 50%;
+    left: 68%;
+    width: 2px;
+    height: 2px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 2px 4px rgba(255, 255, 255, 0.1),
+    0 0 8px rgba(255, 255, 255, 0.1),
+    0 0 20px rgba(255, 255, 255, 1);
+    animation: animate 3s linear infinite;
+}
+
+span::before {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    width: 300px;
+    height: 1px;
+    background: linear-gradient(90deg,#fff, transparent);
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(315deg) translateX(0);
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(315deg) translateX(-1000px);
+        opacity: 0;
+    }
+}
+
+span:nth-child(2){
+    top: 0;
+    right: 20px;
+    animation-delay:-0.2s ;
+    animation-duration: 3s;
+}
+span:nth-child(3){
+    top: 80px;
+    left: 500px;
+    animation-delay:-0.2s ;
+    animation-duration: 3s;
+}
+
+.nav {
+    margin-right: 300px;
+}
+
+.header-line {
+    padding-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Solitreo', cursive;
+}
+
+.nav-item {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 20px;
+    margin-right: 50px;
+
+    transition: color 0.3s linear;
+}
+
+.nav-item:hover {
+    color:#3607b5;
+}
+
+
+.header-logo {
+    margin-left: -100px;
+}
+
+.header-title {
+    color: white;
+    font-family: 'Unbounded', cursive;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 150px;
+
+    animation: text 3s 1;
+
+}
+.text-down {
+    color: #fff;
+    font-family: 'Unbounded', cursive;
+    font-size: 20px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+
+.photoAbout img {
+    height: 420px;
+    width: 400px;
+    margin-left: 930px;
+    margin-top: 150px;
+    border-radius: 0px;
+}
+
+
+
